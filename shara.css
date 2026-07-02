@@ -1,108 +1,93 @@
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+ /* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-body{
-    background:#111;
-    color:#fff;
+body {
+    background-color: #141414; /* Preto de fundo estilo Netflix */
+    color: #FFFFFF; /* Texto branco */
 }
 
-header{
-    background:#e50914;
-    text-align:center;
-    padding:30px;
+a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
-header h1{
-    font-size:45px;
+/* Cabeçalho (Header) */
+header {
+    background-color: #000000;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #E50914; /* Linha vermelha idêntica à marca */
 }
 
-header p{
-    margin-top:10px;
+header h1 {
+    color: #E50914; /* Título em vermelho */
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-nav{
-    background:#000;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    padding:15px;
+nav ul {
+    display: flex;
+    list-style: none;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+nav ul li {
+    margin-left: 20px;
 }
 
-nav a:hover{
-    color:#e50914;
+nav ul li a:hover {
+    color: #E50914; /* Link fica vermelho ao passar o mouse */
+    transition: 0.3s;
 }
 
-main{
-    width:90%;
-    margin:40px auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
+/* Banner de Destaque */
+.banner {
+    position: relative;
+    height: 450px;
+    background-image: linear-gradient(to bottom, rgba(20,20,20,0) 70%, #141414), url('https://picsum.photos/1200/600'); /* Substitua pela URL da sua imagem de destaque */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
 }
 
-.card{
-    background:#1b1b1b;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 0 15px rgba(0,0,0,.5);
-    transition:.4s;
+.banner-content {
+    max-width: 600px;
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.banner-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+/* Grade de Posts/Cards */
+.container {
+    padding: 40px;
 }
 
-.conteudo{
-    padding:20px;
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-left: 5px solid #E50914; /* Detalhe em vermelho no título */
+    padding-left: 10px;
 }
 
-.conteudo h2{
-    color:#e50914;
-    margin-bottom:15px;
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.conteudo p{
-    line-height:1.6;
-    margin-bottom:20px;
-}
-
-button{
-    background:#e50914;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
-    transition:.3s;
-}
-
-button:hover{
-    background:#b20710;
-}
-
-footer{
-    background:#000;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-
+.post-card {
+    background-color: #181818;
+    border-radius: 4px;
+    overflow:
