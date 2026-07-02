@@ -1,5 +1,5 @@
 # blog-da-shara
-o blog que sera criado sera para aprender programacao
+o blog que sera criado para descobrir novas séries e filmes
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
