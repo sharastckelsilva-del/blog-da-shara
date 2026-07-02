@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: #141414; /* Preto de fundo estilo Netflix */
+    background-color: #141414; /* Preto oficial Netflix */
     color: #FFFFFF; /* Texto branco */
 }
 
@@ -23,11 +23,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #E50914; /* Linha vermelha idêntica à marca */
+    border-bottom: 3px solid #E50914; /* Linha vermelha clássica */
 }
 
 header h1 {
-    color: #E50914; /* Título em vermelho */
+    color: #E50914; /* Vermelho Netflix */
     font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -43,15 +43,17 @@ nav ul li {
 }
 
 nav ul li a:hover {
-    color: #E50914; /* Link fica vermelho ao passar o mouse */
+    color: #E50914;
     transition: 0.3s;
 }
 
-/* Banner de Destaque */
+/* Banner de Destaque com Imagem Real Cinematográfica */
 .banner {
     position: relative;
-    height: 450px;
-    background-image: linear-gradient(to bottom, rgba(20,20,20,0) 70%, #141414), url('https://picsum.photos/1200/600'); /* Substitua pela URL da sua imagem de destaque */
+    height: 500px;
+    /* Imagem real com degradê preto para o fundo do blog */
+    background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0.2) 60%, #141414), 
+                      url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -61,12 +63,15 @@ nav ul li a:hover {
 
 .banner-content {
     max-width: 600px;
+    background: rgba(0, 0, 0, 0.6); /* Fundo escurecido suave para dar leitura no texto */
+    padding: 20px;
+    border-radius: 4px;
 }
 
 .banner-content h2 {
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px #000000;
+    color: #FFFFFF;
 }
 
 /* Grade de Posts/Cards */
@@ -77,17 +82,72 @@ nav ul li a:hover {
 .section-title {
     font-size: 24px;
     margin-bottom: 20px;
-    border-left: 5px solid #E50914; /* Detalhe em vermelho no título */
+    border-left: 5px solid #E50914;
     padding-left: 10px;
 }
 
 .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .post-card {
     background-color: #181818;
     border-radius: 4px;
-    overflow:
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 1px solid #222;
+}
+
+.post-card:hover {
+    transform: scale(1.03);
+    border-color: #E50914; /* Borda acende em vermelho no hover */
+}
+
+.post-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem amassar */
+}
+
+.post-info {
+    padding: 15px;
+}
+
+.post-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.post-info p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.btn-read {
+    display: inline-block;
+    background-color: #E50914;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.btn-read:hover {
+    background-color: #B81D24; /* Tom vermelho mais escuro */
+}
+
+/* Rodapé */
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    color: #666666;
+    border-top: 1px solid #222;
+}
