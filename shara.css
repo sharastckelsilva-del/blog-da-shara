@@ -47,13 +47,11 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-/* Banner de Destaque com Imagem Real */
+/* Banner de Destaque */
 .banner {
     position: relative;
     height: 450px;
-    /* Imagem real de cinema com efeito de sombra para o fundo preto */
-    background-image: linear-gradient(to bottom, rgba(20,20,20,0) 70%, #141414), 
-                      url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop'); 
+    background-image: linear-gradient(to bottom, rgba(20,20,20,0) 70%, #141414), url('https://picsum.photos/1200/600'); /* Substitua pela URL da sua imagem de destaque */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -78,3 +76,65 @@ nav ul li a:hover {
 
 .section-title {
     font-size: 24px;
+    margin-bottom: 20px;
+    border-left: 5px solid #E50914; /* Detalhe em vermelho no título */
+    padding-left: 10px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #181818;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 1px solid #333;
+}
+
+.post-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    border-color: #E50914; /* Borda fica vermelha no hover */
+}
+
+.post-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.post-info {
+    padding: 15px;
+}
+
+.post-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn-read {
+    display: inline-block;
+    background-color: #E50914; /* Botão vermelho */
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-read:hover {
+    background-color: #B81D24; /* Vermelho mais escuro no hover */
+}
+
+/* Rodapé */
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #808080; /* Um tom de cinza/branco fosco para não brigar com o resto */
+    border-top: 1px solid #333;
+}
